@@ -4,5 +4,5 @@ import { foodList } from "./product";
 
 
 const main = document.querySelector('main');
-const content = makeItemCard(foodList);
+const content = heroPageContent;
 setContent(main, content)

@@ -1,8 +1,8 @@
 const heroPageContent = `
-<section>
-    <p>Eat Healthy</p>
-    <p>& Feel awesome</p>
-    <button>Order your delicious meal now</button>
+<section class="heroContent flex flex-column">
+    <p class="herotag uppertext">Eat Healthy</p>
+    <p class="herotag uppertext">& Feel awesome</p>
+    <button class="btn">Order your delicious meal now</button>
 </section>
 `;
 
