@@ -28,7 +28,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-size: 16px;
-
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 
@@ -81,8 +82,14 @@ body {
     box-shadow: 1px 1px 15px var(--yellow);
 }
 
+/* .hidden {
+    display: none;
+} */
+
 
 /* SPECIFIC STYLE */
+
+/* Header section */
 header.custom {
     justify-content: space-between;
     padding: 0 1rem;
@@ -107,6 +114,16 @@ nav a:hover {
 
 
 /* main section */
+main {
+    padding: 1rem;
+}
+
+/* Order place section */
+.orderPageHeading {
+    font-size: 3rem;
+    margin-left: 1rem;
+    font-family: var(--headingFont);
+}
 
 .heroimg {
     background-image: url(../images/heroBg.jpg);
@@ -129,4 +146,85 @@ nav a:hover {
     font-size: 4rem;
     font-family: var(--headingFont);
     font-weight: bold;
+}
+
+
+.itemListContainor  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-rows:  repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+}
+
+.item {
+    padding: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 1rem;
+}
+
+.cardLowerPart, .item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardLowerPart {
+    height: 100px;
+}
+
+.itemImage {
+    height: 225px;
+    width: 225px;
+    max-height: 100%;
+    max-width: 100%;
+
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.itembtn {
+    all: unset;
+    height: 30px;
+    width: 200px;
+
+    border: 2px solid var(--orange);
+    color: var(--gray);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.itembtn:hover {
+    background-color: var(--orange);
+    opacity: 0.8;
+    color: #fff;
+}
+
+.itembtn:active{
+    opacity: 1;
+}
+
+
+
+/* final order submission page */
+.orderPlatePopup {
+    background-color: var(--orange);
+    color: #FFF;
+}
+
+
+
+.popupbtn {
+    all: unset;
+    height: 30px;
+    width: 180px;
+
+    border: 2px solid #FFF;
+    background-color: #FFF;
+    color: var(--orange);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.5rem;
 }
