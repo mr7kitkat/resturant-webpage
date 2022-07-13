@@ -6,23 +6,37 @@ const heroPageContent = `
 </section>
 `;
 
-function makeItemCard(itemList) {
-    let h1 = '<h1>Order your food sir...</h1>';
+function makeItemCard(itemList, heading, buttonText) {
+    let h1 = `<h1 class="orderPageHeading">${heading}</h1>`;
     let content = '';
 
     const containor = document.createElement('section');
+    containor.classList.add('itemListContainor');
     itemList.forEach(item => {
         content += `
-        <section>
-            <div><img src="./images/${item.image}" alt="${item.name}"></div>
-            <h2>${item.name}</h2>
-            <p>${item.description}</p>
-            <button>Add to order list</button>
+        <section class="item">
+            <div class="cardUpperPart">
+                <img class="itemImage" src="./images/foodlist/${item["FILE NAME"]}" alt="${item["NAME"]}">
+            </div>
+            <div class="cardLowerPart">
+                <h2 class="itemIitle">${item["NAME"]}</h2>
+                <button class="itembtn" data-item="${item["ID"]}">${buttonText}</button>
+            <div>
         </section>
         `
     });
     containor.innerHTML = content;
 
-    return h1 + containor.outerHTML;
+    const orderPlate = `
+    <section class="orderPlatePopup">
+        <img src="" alt="">
+        <div class="pop>
+            <h2>SEE YOUR PLATE</h2>
+            <button class="popupbtn">Place your order</button>
+        </div>
+    </section>
+    `
+
+    return h1 + containor.outerHTML + orderPlate;
 }
 export {heroPageContent, makeItemCard}
