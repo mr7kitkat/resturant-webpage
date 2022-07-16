@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resturant Webpage</title>
-    <link rel="stylesheet" href="./styles/reset.css">
+
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
-    <header class="bg-yellow flex custom">
-        <h1 class="font-darkGray logo-font">Yummy Tummy</h1>
+<body class="h-screen">
+    <header class="flex justify-between items-center py-6 px-20 bg-lightYellow rounded-b-full">
+        <h1 class="text-3xl text-white font-bold logoText">Yummy Tummy</h1>
 
-        <nav>
-            <a class="font-darkGray" href="#home">Home</a>
-            <a class="font-darkGray" href="#menu">Menu</a>
-            <a class="font-darkGray" href="#about">About us</a>
+        <nav class="flex justify-evenly items-center">
+            <a class="px-3 py-3 rounded-lg text-lightBlack font-semibold text-2xl hover:text-lightYellow hover:bg-lightBlack" href="#home" data-page="0">Home</a>
+            <a class="px-3 py-3 rounded-lg text-lightBlack font-semibold text-2xl hover:text-lightYellow hover:bg-lightBlack" href="#menu" data-page="1">Menu</a>
+            <a class="px-3 py-3 rounded-lg text-lightBlack font-semibold text-2xl hover:text-lightYellow hover:bg-lightBlack" href="#about" data-page="2">About us</a>
         </nav>
     </header>
 
-    <main class="heroimg">
-
+    <main class="h-5/6">
+        <section class="flex flex-col justify-center items-start h-full px-20 heroContent">
+            <h2 class="text-8xl">Eat healthy</h2>
+            <h2 class="text-7xl">and stay healthy</h2>
+            <button class="text-lightBlack p-3 my-5 font-medium text-2xl rounded-full border-lightYellow border-2 hover:bg-lightYellow w-3/12" data-page="1">Make an order</button>
+        </section>
     </main>
 
     <script src="./scripts/main.js"></script>
