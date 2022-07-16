@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch"
+    "build": "webpack --watch",
+    "style": "tailwindcss -i ./src/input.css -o ./dist/styles/styles.css --watch"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "dependencies": {
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
   }
 }
