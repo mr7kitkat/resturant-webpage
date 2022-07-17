@@ -8,7 +8,8 @@ module.exports = {
       "yellow" : "#ffd100",
       "black" : "#202020",
       "lightblack" : "#333533",
-      "white" : "#FFFFFF"
+      "white" : "#FFFFFF",
+      "green": "#4BB543"
     },
     extend: {
       gridTemplateColumns: {

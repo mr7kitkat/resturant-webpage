@@ -6,7 +6,7 @@ const heroPage = `
 <section class="h-full w-full flex flex-col justify-center items-start px-10 myclass">
     <h2 class="text-8xl">Eat Healthy</h2>
     <h2 class="text-6xl">& Stay Healthy</h2>
-    <button data-page="1" class="text-2xl my-6 border-2 border-lightblack rounded-full p-2 w-3/12 transition-all bg-lightblack text-white myclass hover:text-lightblack hover:bg-lightyellow hover:border-lightyellow">Click to Order food</button>
+    <button data-page="1" class="navBtns text-2xl my-6 border-2 border-lightblack rounded-full p-2 w-3/12 transition-all bg-lightblack text-white myclass hover:text-lightblack hover:bg-lightyellow hover:border-lightyellow">Click to Order food</button>
 </section>
 `;
 
@@ -22,7 +22,7 @@ function makeMenu() {
         foodTypeList.add(food['Food Type']);
 
         foodItemBlock += `
-        <section class="fooditem rounded-md p-3">
+        <section class="fooditem rounded-md p-3" data-type="${food['Food Type']}">
             <img src="./images/foodlist/${food['FILE NAME']}" alt="" loading="lazy" class="h-[290px] w-[290px] max-h-full object-cover object-center mx-auto">
             <div class="foodDetails">
                 <h3 class="text-2xl my-2">${food['NAME']}</h3>
@@ -64,9 +64,36 @@ function makeMenu() {
 // Getting content from function
 const menuPage = makeMenu();
 
-function generateOrderPage({foodOrder}) {
-    
+function generateOrderPage(foodOrder) {
+    const returnContent = `
+    <section class="max-w-[600px] h-screen  border-2 border-r-2 mx-auto rounsded-2xl grid grid-rows-6 items-center">
+        <div class="head w-full flex justify-between items-center px-5 py-2 my-1">
+            <h2 class="text-3xl font-bold">Your Orders</h2>
+            <button class="navBtns" data-page="1">
+                <img src="./images/close.png" alt="" class="w-10">
+            </button>
+        </div>
+
+        <div class="w-5/6 max-h-full grid grid-cols-[1fr 3fr 1fr] row-span-4 self-start justify-self-center overflow-y-scroll finalOrderContainor">
+
+            ${foodOrder}
+
+        </div>
+
+        <button class="placeOrderBtn self-center justify-self-center text-2xl my-2 border-2 h-1/2 border-lightblack rounded-full px-5 py-1 w-5/6 transition-all bg-lightblack text-white hover:text-lightblack hover:bg-lightyellow hover:border-lightyellow">Submit Order</button>
+
+        
+    </section>
+
+    <div class="bg-green text-white box-border p-5 h-2/6 w-full flex flex-col items-center justify-evenly transition absolute top-1/3 hidden successmsg">
+        <h2 class="text-8xl">Thank you for order</h2>
+        <p class="text-2xl">Your food will be served within 10 minutes, be patient.</p>
+    </div>
+
+    `
+    return returnContent;
 }
+
 const aboutPage = ``;
 
-export {foodList, heroPage, menuPage, aboutPage};
+export { heroPage, menuPage, aboutPage, generateOrderPage};

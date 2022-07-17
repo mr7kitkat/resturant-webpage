@@ -1,5 +1,5 @@
 function setContent(parentElement, content) {
-    parentElement.innerHTML = ''
+    // parentElement.innerHTML = ''
     parentElement.innerHTML = content;
 }
 
