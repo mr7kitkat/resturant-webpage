@@ -23,6 +23,10 @@ section button.myclass {
     box-shadow: 2px 2px 15px #333533;
 }
 
-section button.myclass:hover {
+section button.myclass:hover,.placeOrderBtn:hover {
     box-shadow: 2px 2px 15px #ffee32;
+}
+
+.fooditem {
+    box-shadow: 2px 3px 10px #333533;
 }

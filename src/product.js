@@ -27,7 +27,7 @@ const foodList = [
         "ID": "4",
         "FILE NAME": "Blue Shot.jpg",
         "NAME": "Blue Shot",
-        "Food Type": "Salad",
+        "Food Type": "Drinks",
         "QTY":0,
         "isSeleted": false,
     },

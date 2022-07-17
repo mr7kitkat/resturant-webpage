@@ -10,7 +10,11 @@ module.exports = {
       "lightblack" : "#333533",
       "white" : "#FFFFFF"
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'foodmenu': 'repeat(auto-fill, minmax(320px, 1fr))',
+      },
+    },
   },
   
   plugins: [],
