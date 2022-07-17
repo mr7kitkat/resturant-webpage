@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1.myclass {
+    text-shadow: 2px 2px 12px #d6d6d6;
+}
+
+section.myclass {
+    background: url(../images/heroBg.jpg);
+    background-position: right;
+    background-size: 700px;
+    background-repeat: no-repeat;
+}
+
+section button.myclass {
+    box-shadow: 2px 2px 15px #333533;
+}
+
+section button.myclass:hover {
+    box-shadow: 2px 2px 15px #ffee32;
+}
